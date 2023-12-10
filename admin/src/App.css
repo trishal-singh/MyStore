@@ -1,42 +1,39 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.logo{
+  font-family: 'Kalnia', serif;
+  font-size: 100px;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.description{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  
+  height: 20%;
+  text-align: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.buttons{
+  
+  
+  display: flex;
+  justify-content: center;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button{
+  margin: 50px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  color:black;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+button:hover{
+  color:white;
+  background-color: black;
 }
