@@ -7,9 +7,9 @@ function App() {
 
   return (
     <>
-      <div class="logo">MyStore</div>
-      <p class="description">Welcome to MyStore admin app use the buttons below to add or remove data.</p>
-      <div class="buttons">
+      <div className="logo">MyStore</div>
+      <p className="description">Welcome to MyStore admin app use the buttons below to add or remove data.</p>
+      <div className="buttons">
       <Link to="/add"><Button text="ADD"/></Link>
       <Link to="/delete"><Button text="DELETE"/></Link>
       

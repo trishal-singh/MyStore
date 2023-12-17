@@ -1,0 +1,35 @@
+form{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+form {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 20px;
+    }
+select{
+    margin-left:20px ;
+
+}
+.body{ height:250px;
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+button{
+    margin-left:30px ;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    color:black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+  button:hover{
+    color:white;
+    background-color: black;
+  }
