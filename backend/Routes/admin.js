@@ -27,4 +27,9 @@ app.get("/product/:id",(req,res)=>{
   console.log("hit")
   productData.findOne({'_id':req.params.id}).then((data)=>res.json(data)).catch((err)=>res.send(err))
 })
+// Delete a specific product
+app.delete("/product/:id",(req,res)=>{
+  console.log("hit")
+  productData.deleteOne({'_id':req.params.id}).then((data)=>res.json(data)).catch((err)=>res.send(err))
+})
 module.exports = app
