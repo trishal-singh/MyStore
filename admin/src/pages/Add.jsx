@@ -2,6 +2,7 @@
 import { useState } from "react"
 import "./Add.css"
 import categories from "../data"
+import axiosClient from "../services/axiosClient"
 const Add = () => {
   // handle name 
   const [name,setName]=useState("")
@@ -41,6 +42,9 @@ const Add = () => {
       "Category": category
     }
     console.log(formdata)
+    axiosClient.post('admin/product',formdata)
+    .then((res)=>console.log(res))
+    .catch((err)=> console.log(err))
   }
   return (
     <>
