@@ -5,6 +5,9 @@ const port = 3000
 const mongoose=require('mongoose')
 const connectDB=require('./dbConn')
 const adminRouter = require('./Routes/admin')
+const cors = require('cors')
+
+app.use(cors())
 app.use(express.json())
 connectDB()
 app.use("/admin",adminRouter)
