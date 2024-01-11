@@ -16,7 +16,10 @@ const Delete = () => {
     <h1>Products</h1>
     {
      items.map((item)=>(
+      <>
       <Item  item={item}/>
+      <hr/>
+      </>
     ))
     }
     </>
