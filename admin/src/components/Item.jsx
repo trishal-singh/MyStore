@@ -1,13 +1,14 @@
 import React from 'react'
 import Button from './Button'
 import './Item.css'
-const Item = () => {
+const Item = (props) => {
+    
   return (
     <div className='item-container'>
-    <div>Name</div>
-    <div>Gender</div>
-    <div>Category</div>
-    <div>Price</div>
+    <div>{props.item.Name}</div>
+    <div>{props.item.Category}</div>
+    <div>{props.item.Gender}</div>
+    <div>{props.item.Price}</div>
     <button >DELETE</button>
     
     </div>
