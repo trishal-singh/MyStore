@@ -1,8 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.logo{
+.auth-logo{
   font-family: 'Kalnia', serif;
   font-size: 100px;
   text-align: center;
+}
+form{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+button{
+    margin-left:100px ;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    color:black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+  button:hover{
+    color:white;
+    background-color: black;
+  }
+  .body{ height:250px;
+    display: flex;
+    justify-content: center;
+    
 }
