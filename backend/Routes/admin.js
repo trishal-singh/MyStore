@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express.Router()
-const productData=require('../Models/admin')
+const {productData}=require('../Models/model')
 // Add a product
 app.post("/product",(req,res)=>{
   const data =new productData({
