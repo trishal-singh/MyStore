@@ -10,7 +10,7 @@ userRouter.post("/register", async (req, res) => {
     try {
       const user = await userData.findOne({ username })
       if (user) {
-        return res.status(400).json({ type: UserErrors.USERNAME_ALREADY_EXISTS })
+        return res.status(400).json({ type:"USERNAME_ALREADY_EXISTS" })
       }
       const hashedPassword = await bcrypt.hash(password, 10)
       const newUser = new userData({ username, password: hashedPassword })
@@ -32,7 +32,7 @@ userRouter.post("/register", async (req, res) => {
       }
       const isPasswordValid = await bcrypt.compare(password, user.password)
       if (!isPasswordValid) {
-        return res.status(400).json({ type: UserErrors.WRONG_CREDENTIALS })
+        return res.status(400).json({ type: "WRONG_CREDENTIALS" })
       }
       const token = jwt.sign({ id: user._id }, "secret")
       res.json({ token, userID: user._id })
