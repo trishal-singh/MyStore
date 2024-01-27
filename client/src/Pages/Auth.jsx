@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import './Auth.css'
 import axios from 'axios'
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 const Auth = () => {
     const [UserName,setUserName]= useState('')
     const [Password,setPassword]=useState('')
+    const navigate = useNavigate()
+    const [cookies, setCookies] = useCookies(["access_token"])
     const handleUserName = (e)=>{
         setUserName(e.target.value)
        }
@@ -16,8 +20,10 @@ const Auth = () => {
         const result = await axios.post("http://localhost:3000/auth/login", {
           "username":UserName,
           "password":Password,
-        });
-        alert("Logged IN")
+        })
+       
+        setCookies("access_token", result.data.token)
+        navigate("/")
         console.log(result)
        }
        catch(e)
@@ -31,7 +37,7 @@ const Auth = () => {
        const result = await axios.post("http://localhost:3000/auth/register", {
         "username":UserName,
         "password":Password,
-       });
+       })
        alert("Registered")
        console.log(result)
       }
