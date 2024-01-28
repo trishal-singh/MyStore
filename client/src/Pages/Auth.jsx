@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Auth.css'
-import axios from 'axios'
+import axiosClient from '../services/axiosClient';
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 const Auth = () => {
@@ -17,7 +17,7 @@ const Auth = () => {
     const handleLogin = async (e)=>{
        e.preventDefault()
        try{
-        const result = await axios.post("http://localhost:3000/auth/login", {
+        const result = await axiosClient.post("auth/login", {
           "username":UserName,
           "password":Password,
         })
@@ -34,7 +34,7 @@ const Auth = () => {
     const handleRegister = async (e)=>{
       e.preventDefault()
       try{
-       const result = await axios.post("http://localhost:3000/auth/register", {
+       const result = await axiosClient.post("auth/register", {
         "username":UserName,
         "password":Password,
        })
