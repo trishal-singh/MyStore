@@ -14,7 +14,7 @@ form{
     justify-content: space-evenly;
     font-size: 20px;
 }
-button{
+.auth-btn{
     margin-left:100px ;
     width: 100px;
     height: 30px;
@@ -24,7 +24,7 @@ button{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
   }
-  button:hover{
+  .auth-btn:hover{
     color:white;
     background-color: black;
   }

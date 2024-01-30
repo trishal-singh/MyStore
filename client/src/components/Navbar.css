@@ -23,7 +23,17 @@ nav{
     display: flex;
     justify-content:space-evenly;
     font-size: larger;
-   
-    width: 200px;
-    
+    width: 100px;
+}
+.nav-cart{
+    transition: transform 0.2s;
+}
+.nav-cart:hover{
+    transform: scale(1.5);
+}
+.nav-user{
+    transition: transform 0.2s;
+}
+.nav-user:hover{
+    transform: scale(1.5);
 }

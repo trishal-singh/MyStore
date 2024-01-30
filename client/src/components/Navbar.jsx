@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css'
+import { FaCartPlus,FaUser } from 'react-icons/fa'
 const Navbar = () => {
   return (
     <nav>
@@ -9,8 +10,9 @@ const Navbar = () => {
             <div>ABOUT</div>
         </div>
         <div className='shop-btns'>
-            <div>CART</div>
-            <div>USER</div>
+            <div className='nav-cart'><FaCartPlus/></div>
+            <div className='nav-user'><FaUser/></div>
+            
         </div>
     </nav>
   )

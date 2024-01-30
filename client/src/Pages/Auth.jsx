@@ -57,8 +57,8 @@ const Auth = () => {
       <label>
        Password : <input type="password" value={Password} onChange={handlePassword}></input>
       </label>
-      <button onClick={handleLogin}>LOGIN</button>
-      <button onClick={handleRegister}>REGISTER</button>
+      <button onClick={handleLogin} className='auth-btn'>LOGIN</button>
+      <button onClick={handleRegister} className='auth-btn'>REGISTER</button>
     </form>
     </div>
     </>
