@@ -9,15 +9,15 @@
 nav{
     display: flex;
     justify-content: space-between;
-    border: solid 2px black;
+    border-bottom: solid 2px black;
     align-items: center;
 }
 .nav-btns{
     display: flex;
     justify-content:space-evenly;
     font-size: larger;
-    
     width: 300px;
+    
 }
 .shop-btns{
     display: flex;
@@ -30,10 +30,16 @@ nav{
 }
 .nav-cart:hover{
     transform: scale(1.5);
+    cursor: pointer;
 }
 .nav-user{
     transition: transform 0.2s;
 }
 .nav-user:hover{
     transform: scale(1.5);
+    cursor: pointer;
+}
+.nav-btns>div:hover{
+  font-weight: bold;
+  cursor: pointer;
 }
