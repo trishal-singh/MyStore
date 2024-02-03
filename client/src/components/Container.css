@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.product-details{
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+    font-family: 'Roboto', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.buy-btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color:black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.buy-btn:hover{
+    color:white;
+    background-color: black;
+  }

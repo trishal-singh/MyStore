@@ -2,6 +2,7 @@ import React from 'react'
 import { useCookies } from "react-cookie";
 import { Navigate } from "react-router-dom";
 import Navbar from '../components/Navbar';
+import Container from '../components/Container';
 import { useGetProducts } from '../hooks/useGetProducts';
 const Shop = () => {
     const [cookies, _] = useCookies(["access_token"]);
@@ -14,10 +15,10 @@ const Shop = () => {
           <Navbar/>
           <div>Shop</div>
           {
-          products.map((product)=>(
-            <p>{product.Name}</p>
-          ))
-         }
+            products.map((product)=>(
+             <Container item={product}/>
+            ))
+          }
          </>
     
   )
