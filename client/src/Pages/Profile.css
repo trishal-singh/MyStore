@@ -1,0 +1,29 @@
+.profile-container{
+    font: Roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+    height: 500px;
+    width: 300px;
+    margin:auto;
+}
+.profile-container>div{
+    margin:20px;
+    font-weight: bold;
+}
+.logout-btn{
+    margin:20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    color:black;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.logout-btn:hover{
+    color:white;
+    background-color: black;
+}

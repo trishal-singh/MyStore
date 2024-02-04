@@ -8,6 +8,7 @@ const Auth = () => {
     const [Password,setPassword]=useState('')
     const navigate = useNavigate()
     const [cookies, setCookies] = useCookies(["access_token"])
+    
     const handleUserName = (e)=>{
         setUserName(e.target.value)
        }
@@ -23,6 +24,7 @@ const Auth = () => {
         })
        
         setCookies("access_token", result.data.token)
+        setCookies("userID",result.data.userID)
         navigate("/")
         console.log(result)
        }
