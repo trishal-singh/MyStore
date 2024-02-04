@@ -59,4 +59,18 @@ userRouter.post("/register", async (req, res) => {
       res.sendStatus(401)
     }
   }
+  userRouter.get("/user/:userID", async (req, res) => {
+    const { userID } = req.params;
+  console.log('hit')
+    try {
+      const user = await userData.findOne({'_id':userID});
+      if (!user) {
+        return res.status(400).json({ type:"No User Found 1" });
+      }
+  
+      res.json({ name: user.username,availableMoney: user.availableMoney });
+    } catch (err) {
+      res.status(500).json({ type: "No User Found 2" });
+    }
+  });
   module.exports={userRouter,verifyToken}
