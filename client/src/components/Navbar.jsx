@@ -13,7 +13,7 @@ const Navbar = () => {
         </div>
         <div className='shop-btns'>
             <div className='nav-cart'><FaCartPlus/></div>
-            <div className='nav-user'><FaUser/></div>
+            <div className='nav-user' onClick={()=>navigate('/user')}><FaUser/></div>
             
         </div>
     </nav>
