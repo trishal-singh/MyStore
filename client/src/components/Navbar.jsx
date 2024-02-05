@@ -12,7 +12,7 @@ const Navbar = () => {
             <div onClick={()=>navigate('/about')}>ABOUT</div>
         </div>
         <div className='shop-btns'>
-            <div className='nav-cart'><FaCartPlus/></div>
+            <div className='nav-cart' onClick={()=>navigate('/cart')}><FaCartPlus/></div>
             <div className='nav-user' onClick={()=>navigate('/user')}><FaUser/></div>
             
         </div>
